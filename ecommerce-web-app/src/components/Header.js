@@ -16,7 +16,7 @@ const Header = () => {
   }
 
   return (
-    <header className="bg-gray-800 text-white flex p-4 sticky top-0">
+    <header className="bg-gray-800 text-white flex p-4 sticky top-0 z-10">
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-2xl font-bold">
           <a href="/">E-Commerce Platform</a>
@@ -27,8 +27,8 @@ const Header = () => {
       </div>
       {
         showDrawer &&
-        <div className='border border-white w-[30%] absolute right-0 bg-gray-800 rounded-md h-[100vh] shadow-3xl overflow-auto'>
-          <div className="float-right p-4 cursor-pointer" onClick={handleClose}>X</div>
+        <div className='border border-white w-[95%] md:w-[30%] absolute right-0 bg-gray-800 rounded-md h-[100vh] shadow-3xl overflow-auto'>
+          <div className="float-right p-4 cursor-pointer" onClick={handleClose}>&#x2715;</div>
           <Cart/>
         </div>
       }

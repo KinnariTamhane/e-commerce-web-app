@@ -13,7 +13,7 @@ const Cart = () => {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-4 pl-3 pt-3 text-center mt-10">Shopping Cart</h1>
+      <h1 className="text-2xl font-bold mb-10 pl-3 pt-3 text-center mt-8">Shopping Cart</h1>
       {cartItems.length === 0 ? (
         <p className='mt-40 mb-20 text-center flex justify-center align-middle min-h-[70vh]'>Your cart is empty.</p>
       ) : (
