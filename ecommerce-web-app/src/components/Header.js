@@ -7,13 +7,10 @@ const Header = () => {
   const cartCount = useSelector((state) => state.cart.count);
   const [showDrawer, setShowDrawer] = useState(false);
 
-  const handleClick = () =>{
+  const handleDrawer = () =>{
     setShowDrawer(prevShowDrawer => !prevShowDrawer)
   }
 
-  const handleClose = () => {
-    setShowDrawer(prevShowDrawer => !prevShowDrawer)
-  }
 
   return (
     <header className="bg-gray-800 text-white flex p-4 sticky top-0 z-10">
@@ -21,14 +18,14 @@ const Header = () => {
         <h1 className="text-2xl font-bold">
           <a href="/">E-Commerce Platform</a>
         </h1>
-          <div className="flex space-x-4">
-           <span onClick={handleClick}>Cart ({cartCount})</span>
+          <div className="flex space-x-4 cursor-pointer">
+           <span onClick={handleDrawer}>Cart ({cartCount})</span>
           </div>
       </div>
       {
         showDrawer &&
-        <div className='border border-white w-[95%] md:w-[30%] absolute right-0 bg-gray-800 rounded-md h-[100vh] shadow-3xl overflow-auto'>
-          <div className="float-right p-4 cursor-pointer" onClick={handleClose}>&#x2715;</div>
+        <div className='border border-gray-800 w-[100%] md:w-[30%] absolute right-0 bg-gray-800 rounded-md h-[100vh] shadow-3xl overflow-auto mb-20'>
+          <div id="cart" className="float-right p-4 cursor-pointer" onClick={handleDrawer}>&#x2715;</div>
           <Cart/>
         </div>
       }
