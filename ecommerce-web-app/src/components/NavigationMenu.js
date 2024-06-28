@@ -1,4 +1,3 @@
-// src/components/NavigationMenu.js
 import React from 'react';
 
 const NavigationMenu = () => {

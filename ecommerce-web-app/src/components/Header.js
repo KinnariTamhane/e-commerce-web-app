@@ -1,4 +1,3 @@
-// src/components/Header.js
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import Cart from './Cart';
